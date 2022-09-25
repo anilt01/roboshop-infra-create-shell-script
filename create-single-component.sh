@@ -33,5 +33,4 @@ if [ -z "${COMPONENT}" ]; then
  echo "Input component name is needed"
  exit 1
 fi
-
 create_ec2

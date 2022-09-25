@@ -29,7 +29,7 @@ if [ -z "${SGID}" ]; then
 fi
 
 COMPONENT="${1}"
-if [ -z "${component}" ]; then
+if [ -z "${COMPONENT}" ]; then
  echo "Input component name is needed"
  exit 1
 fi

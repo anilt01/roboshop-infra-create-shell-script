@@ -3,7 +3,7 @@
 ZONE_ID="Z02266743LCLZMJHWB4RC"
 SG_NAME="allow-all"
 
-ccreate_ec2() {
+create_ec2() {
    PRIVATE_IP=$(aws ec2 run-instances \
        --image-id ${AMI_ID} \
        --instance-type t3.micro \

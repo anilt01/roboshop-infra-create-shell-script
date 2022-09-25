@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ZONE_ID="Z02266743LCLZMJHWB4RC"
-SG_NAME=allow-all
+SG_NAME="allow-all"
 
 create_ec2() {
  PRIVATE_IP=$(aws ec2 run-instances \

@@ -18,7 +18,7 @@ create_ec2() {
    PRIVATE_IP=$(aws ec2 run-instances \
        --image-id ${AMI_ID} \
        --instance-type t3.micro \
-       --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}} {Key=Monitor,Value=yes} {Key=Environment,Value=${ENV}} {Key=Component,Value=${component}}]"  \
+       --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}, Key=Monitor,Value=yes, Key=Environment,Value=${ENV}, Key=Component,Value=${component}}]"  \
        --instance-market-options "MarketType=spot,SpotOptions={SpotInstanceType=persistent,InstanceInterruptionBehavior=stop}"\
        --security-group-ids ${SGID} \
        | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
